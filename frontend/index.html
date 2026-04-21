@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Project</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class=" warning-area">
+        <h3>🚫 Mobile Not Supported</h3>
+        <p>This website is designed to work on desktop computers only.</p>
+    </div>
+    <main class="wrapper">
+        <aside class="container" style="--dir: column">
+            <h3>Certificate Fields</h3>
+            <p>Type values below — the certificate updates instantly. Validation rules apply. Print is enabled only when all fields are valid ✅.</p>
+            <div class="inputs-area">
+                <div class="input-area">
+                    <label for="name">Student Name</label>
+                    <input type="text" name="name" id="student_name" placeholder="e.g., Ahmed Salem">
+                    <div class="input-err-container">this is erroe.</div>
+                </div>
+                <div class="input-area">
+                    <label for="course">Course Name</label>
+                    <textarea name="course" id="course_name" placeholder="e.g., problem solving course.."></textarea>
+                    <div class="input-err-container">this is erroe.</div>
+                </div>
+                <div class="input-area">
+                    <label for="instructor">Instructor Name</label>
+                    <input type="text" name="instructor" id="instructor_name" placeholder="e.g., Dr. Abdullah Mousa..">
+                    <div class="input-err-container">this is erroe.</div>
+                </div>
+                <div class="input-area">
+                    <label for="signature">Signature Image</label>
+                    <label class="upload-area">
+                        <input type="file" name="signature" id="signature_image" hidden>
+
+                        <span class="material-symbols-outlined icon">upload_file</span>
+                        <div class="text">
+                            <span class="upload-main-txt">Click to upload your file or drag & drop here.</span>
+                            <span class="upload-sub-txt">PNG ONLY, up to 5MB.</span>
+                        </div>
+                    </label>
+                    <div class="input-err-container">this is erroe.</div>
+                </div>
+                <div class="input-area">
+                    <label for="date">Issued Date</label>
+                    <input type="date" name="date" id="issued_date">
+                    <div class="input-err-container">this is erroe.</div>
+                </div>
+                <div class="input-area">
+                    <label for="serial">Certificate Serial</label>
+                    <input type="text" name="serial" id="certificate_serial" placeholder="e.g., dfw 232 3321 0..">
+                    <div class="input-err-container">this is erroe.</div>
+                </div>
+            </div>
+            <div class="btns-area">
+                <button class="fill-demo">Fill Demo</button>
+                <button class="reset">Reset</button>
+                <button class="print-certificate">Print A4 Landspace</button>
+            </div>
+        </aside>
+        <div class="preview-area">
+            <header class="container" style="--justify: space-between; --align: center;">
+                <h4>Preview (Print will output ONLY the certificate)</h4>
+                <p class="print-status-log">❌ Not ready to print</p>
+            </header>
+            <div class="container" style="--dir: column; --align: flex-start;">
+                <h2>Live Preview:</h2>
+                <div class="preview">
+                    <div class="certificate-content">
+                        <div class="certificate-serial-container">
+                            <p>CERTIFICATE SERIAL</p>
+                            <p class="serial-placeholder">-</p>
+                        </div>
+                        <div class="issued-date-container">
+                            <p>ISSUED DATE</p>
+                            <p class="issued-date-placeholder">-</p>
+                        </div>
+                        <div class="middle-data">
+                            <img src="../assets/logo.png" alt="logo" class="logo-img">
+                            <h1>Certificate of Completion</h1>
+                            <p>This is proudly presented to</p>
+                            <h1 style="font-size: 40px;" class="student-name-placeholder">Student Name</h1>
+                            <p>for successfully completing</p>
+                            <h2 class="course-name-placeholder">Course Name Goes Here</h2>
+                            <hr class="line">
+                        </div>
+                        <div class="stamp-area">
+                            <img src="../assets/Certified.png" alt="Certified logo" class="certified-img">
+                            <div class="signature-area">
+                                <img src="" alt="signature" class="signature-img">
+                                <hr class="line">
+                                <p class="instructor-name-placeholder">Instructor Name Goes Here</p>
+                            </div>
+                        </div>
+                        <p class="website-link">www.sample.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
